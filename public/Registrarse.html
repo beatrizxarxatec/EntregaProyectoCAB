@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styleindex.css">
+    <title>Login</title>
+    <script src="./scripts/sendRegistration.js" async></script>
+</head>
+<body>
+    <div class="center">
+        <div id="prueba">
+            <img id="logoXarxatec" src="public/logo-x-activa-movil-w412.png" alt="Titulo">
+            <img id="imagenLogoXarxatec" src="public/login-img.svg" alt="LogoEnMovimiento">
+        </div>
+        <p>Registrarse</p>
+        <form id="form" action="#" method="post">
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="nombre"><input  id="nombreUsuario"
+                    name="name" type="text" placeholder="   Nombre"></p>
+
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="Primer apellido"><input 
+                    id="apellidoUsuario" name="firstSurname" type="text" placeholder="  Primer apellido"></p>
+
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="Segundo apellido"><input 
+                    id="segapellidoUsuario" name="secondSurname" type="text" placeholder="  Segundo apellido"></p>
+
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="email Personal"><input 
+                    id="emailPersonal" name="personalEmailAddress" type="email" placeholder="  Email personal"></p>
+
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="email Activa"><input  id="emailActiva"
+                    name="activaEmailAddress" type="email" placeholder="  Email Activa"></p>
+
+            <p><img class="iconLogin" src="public/login-icono-clave.png" alt="clave"><input  id="pass" name="password"
+                    type="password" placeholder="   Clave">
+
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="descripcion"><input  id="descripcion" name="description"
+                    type="text" placeholder="   Descripcion">
+
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="telefono"><input  id="numeroTelefono"
+                    name="phoneNumber" type="number" placeholder="  Número de teléfono"></p>
+
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="ciudad"><input  id="ciudad" name="city"
+                    type="text" placeholder="  Ciudad"></p>
+
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="código Postal"><input  id="codigoPostal"
+                    name="zipCode" type="number" placeholder="  Código Postal"></p>
+           
+            <p> Curriculum Vitae <input class="registro" id="cv" name="cv" class="cv" type="file"></p>
+           
+            <p> Foto <input class="registro" id="avatar" name="avatar" class="cv" type="file"></p>
+           
+            <button id="sendRegistration" type="button">ENTRAR</button>
+
+        </form>
+    </div>
+</body>
+
+</html>

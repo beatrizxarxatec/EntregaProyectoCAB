@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+  <link rel="stylesheet" href="style/stylePointsWhitSending.css">
+  <title>Mis puntos</title>
+</head>
+
+<body>
+  <div id="menu">
+    <div class="menuFoot">
+      <a href="mispuntosEnviados.html"><img src="public/iconosMenu/mis-puntos-red.svg" alt="points"></a>
+      <p class="red">Mis puntos</p>
+    </div>
+    <div class="menuFoot">
+      <a href="ranking.html"><img src="public/iconosMenu/ranking-gray.svg" alt="ranking"></a>
+      <p>Ranking</p>
+    </div>
+    <div class="menuFoot">
+      <a href="#"><img src="public/iconosMenu/mi-perfil-gray.svg" alt="perfil"></a>
+      <p>Mi perfil</p>
+    </div>
+    <div class="menuFoot">
+      <a href="index.html"><img src="public/iconosMenu/logout-gray.svg" alt="exit"></a>
+      <p>Salir</p>
+    </div>
+  </div>
+  <div>
+    <h1 class="center">MIS PUNTOS</h1>
+    <hr />
+    <div id="divPiechart">
+      <div class="color">
+        <div class="piechart1">
+          <div id="numberpie1">350</div>
+        </div>
+        <p class="pieText">DISPONIBLES<br> ¡Listos para enviar!</p>
+      </div>
+      <div>
+        <div class="piechart2">
+          <div id="numberpie2">820</div>
+        </div>
+        <p class="pieText">TOTAL<br> <span id="sendText">Enviados</span> | <span id="receibedText">Recibidos</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="enviarPuntos">
+    <h2 class="center">ENVIAR PUNTOS</h2>
+    <hr />
+    <div id="fondo">
+      <p class="center">Alumnos Xarxatec Activa 2023</p>
+      <div class="search"><a href="mispuntosEnviadosConEnvio.html">
+          <img id="iconActiva" src="public/puntos-activa-logo.svg" alt="logoBuscarGente"></a>
+        <select name="alumnos" id="alumnos">
+          <option value="r">Enviar puntos a...</option>
+          <option value="r">Antonio</option>
+          <option value="a">Lydia</option>
+          <option value="v">Juan</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div id="miHistorial">
+    <h2 class="center">MI HISTORIAL</h2>
+    <hr />
+    <div class="btnGroup">
+      <a href="mispuntosEnviados.html">
+        <button id="sendButton">ENVIADOS</button></a>
+      <button id="receivedButton"><u>RECIBIDOS</u></button>
+    </div>
+    <div class="pAlign">
+      <div><span class="pointsBlue"><b>100</b></span> PUNTOS ENVIADOS
+        30/07/2023</div>
+      <p> No estoy diciendo que sea Batman, sólo digo que nadie nos ha visto a batman y a mi en la misma habitación. Soy
+        la noche!</p>
+      <p> de parte de <b>Batman</b></p>
+    </div>
+    <hr class="hrHistory" />
+    <div class="pAlign">
+      <div><span class="pointsBlue"><b>20</b></span> PUNTOS ENVIADOS
+        30/09/2023</div>
+      <br>
+      Al final resulta que no solo era yo el rey ^ - ^<br>
+      <p>de parte de <b>Elvis no Presley</b></p>
+    </div>
+    <hr class="hrHistory" />
+    <div class="pAlign">
+      <div><span class="pointsBlue"><b>30</b></span> PUNTOS ENVIADOS
+        30/11/2023</div>
+      <br>
+      El mqtt nos dio la señal y el sensor se encendio, así que coavabunga<br>
+      <p> de parte de <b>Arduino raspberry pi</b></p>
+    </div>
+
+    <hr class="hrHistory" />
+    <div class="pAlign">
+      <div><span class="pointsBlue"><b>90</b></span> PUNTOS ENVIADOS
+        30/11/2023</div>
+      <br>
+      Gracias a tu separación poco inusual ganamos al fijarse el jurado en ellas<br>
+      <p> de parte de <b>Pocah-juntas </b></p>
+    </div>
+
+    <hr class="hrHistory" />
+    <div class="pAlign">
+      <div><span class="pointsBlue"><b>60</b></span> PUNTOS ENVIADOS
+        30/11/2023</div>
+      <br>
+      Gracias por la limpieza, ahora podre moverme en mi cuarto con total libertad sin golpear latas y otros
+      enseres!<br>
+      <p> de parte de <b>Marie Kond</b> </p>
+    </div>
+
+    <br><br><br><br>
+  </div>
+</body>
+
+</html>

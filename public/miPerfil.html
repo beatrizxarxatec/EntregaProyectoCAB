@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styleranking.css">
+    <link rel="stylesheet" href="style/styleindex.css">
+    <title>Mi perfil</title>
+    <script src="./scripts/doLogout.js" async></script>
+    <script src="./scripts/common.js" async></script>
+    <script src="./scripts/createPerfil.js" async></script>
+</head>
+
+<body>
+    <nav id="menu">
+        <div class="menuFoot">
+            <a href="mispuntosEnviados.html"><img src="public/iconosMenu/mis-puntos-gray.svg" alt="points"></a>
+            <p>Mis puntos</p>
+        </div>
+        <div class="menuFoot">
+            <a href="ranking.html"><img src="public/iconosMenu/ranking-red.svg" alt="ranking"></a>
+            <p class="red">Ranking</p>
+        </div>
+        <div class="menuFoot">
+            <a href="miPerfil.html"><img src="public/iconosMenu/mi-perfil-gray.svg" alt="perfil"></a>
+            <p>Mi perfil</p>
+        </div>
+        <div class="menuFoot">
+            <a id="logout" href="#"><img src="public/iconosMenu/logout-gray.svg" alt="exit"></a>
+            <p>Salir</p>
+        </div>
+    </nav>
+    <div class="column"></div>
+    <div id="socialColumns">
+        <h2 class="center">Perfil</h2>
+        <hr />
+        <div id="datosPerfil" class="perfilDiv">
+            <p class="perfilP">
+                <label class="perfilLabel" for="name">Nombre: </label><span id="name"></span>
+            </p>
+
+            <p class="perfilP">
+                <label class="perfilLabel" for="firstSurname">Primer Apellido: </label> <span id="firstSurname"></span>
+            </p>
+
+            <p class="perfilP">
+                <label class="perfilLabel" for="secondSurname">Segundo Apellido: </label> <span id="secondSurname"></span>
+            </p>
+
+            <p class="perfilP">
+                <label class="perfilLabel" for="personalEmailAddress">Email Personal: </label> <span id="personalEmailAddress"></span>
+            </p>
+
+            <p class="perfilP">
+                <label class="perfilLabel" for="activaEmailAddress">Email Activa: </label> <span id="activaEmailAddress"></span>
+            </p>
+            <p class="perfilP">
+                <label class="perfilLabel" for="description">Descripcion: </label> <span id="description"></span>
+            </p>
+
+            <p class="perfilP">
+                <label class="perfilLabel" for="phoneNumber">Telefono: </label> <span id="phoneNumber"></span>
+            </p>
+
+            <p class="perfilP">
+                <label class="perfilLabel" for="city">Ciudad: </label> <span id="city"></span>
+            </p>
+
+            <p class="perfilP">
+                <label class="perfilLabel" for="zipCode">Código Postal: </label> <span id="zipCode"></span>
+            </p>
+
+            <p class="perfilP">
+                <label class="perfilLabel" for="avatar">Avatar: </label> <img id="avatar" width="300px" src=""></img>
+            </p>
+
+            <p class="perfilP">
+                <label class="perfilLabel" for="cv">CV: </label> <a id="cv" href="#">Descargar</a>
+            </p>
+        </div>
+
+        <!-- <p> Curriculum Vitae <input class="registro" id="CV" name="cv" class="cv" type="file"></p> -->
+        <br><br><br>
+    </div>
+</body>
+
+</html>

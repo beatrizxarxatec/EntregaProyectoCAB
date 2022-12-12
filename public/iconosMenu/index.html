@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proyectoFinal/style/styleindex.css">    
+    <title>Login</title>
+    <script src="formulario.js" async></script>
+</head>
+
+<body>
+    <div class="center">
+        <div id="prueba">
+            <img id="logoXarxatec" src="public/logo-x-activa-movil-w412.png" alt="Titulo">
+            <img id="imagenLogoXarxatec" src="public/login-img.svg" alt="LogoEnMovimiento"></div>
+        <p>En una comunidad Activa aprendemos más</p>
+        
+        <form action="#" method="post">
+            <p><img class="iconLogin" src="public/login-icono-usuario.png" alt="usuario"><input type="text"
+                    placeholder="Usuario" required pattern="/^[A-Za-z0-9/_/-]{4,16}$/"></p>
+            <p><img class="iconLogin" src="public/login-icono-clave.png" alt="clave"><input type="password"
+                    placeholder="Clave" required pattern="/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/">
+            </p>
+
+            <button id="enter" type="submit"><a id="buttonEntry" href="mispuntosEnviados.html">ENTRAR</a>
+            </button>
+            <p>¿No recuerdas la clave? <a href="#">Restablecer aquí</a></p>
+        </form>
+    </div>
+</body>
+
+</html>
