@@ -141,6 +141,7 @@ hr {
 
 #pointQty {
   width: 40%;
+  font-size: medium;
 }
 
 #receibedText {
@@ -237,6 +238,7 @@ select {
 
 #sendDescription {
   width: 69%;
+  font-size: medium;
 }
 
 #enter {
