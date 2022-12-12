@@ -105,7 +105,7 @@ function createStudent(student: Student, callback: Function) {
   );
 };
 
-function findAllStudents(callback: Function) { // Para el desplegable de a quien se les da los puntos
+function findAllStudents(callback: Function) {
   const queryString = "SELECT id, name, first_surname, second_surname, email_personal, email_activa, phone_number, zip_code FROM student";
   db.query(queryString, (err, result) => {
     if (err) callback(err, null);
@@ -115,7 +115,7 @@ function findAllStudents(callback: Function) { // Para el desplegable de a quien
   })
 }
 
-function findOneStudent(id: string, callback: Function) { // Para los datos del perfil
+function findOneStudent(id: string, callback: Function) { 
 
   const queryString = "SELECT * FROM student WHERE id = ?";
   db.query(queryString, [id], (err, result) => {

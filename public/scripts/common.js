@@ -1,4 +1,4 @@
-// Hacer peticion y obtener Json para los enviados
+
 async function getSentHistoryJson() {
     const currentUserId = sessionStorage.getItem('currentUserId');
     const url = "http://localhost:3000/rewards?" + new URLSearchParams({ currentUserId: currentUserId });
@@ -7,7 +7,7 @@ async function getSentHistoryJson() {
     return rewardsJSON;
 }
 
-// A partir del json de enviados, obtener el total de puntos enviados
+
 function getTotalSentPoints(rewardsJSON) {
     let points = 0;
     for (let reward of rewardsJSON) {
@@ -16,7 +16,7 @@ function getTotalSentPoints(rewardsJSON) {
     return points;
 }
 
-// Hacer peticion y obtener Json para los recibidos
+
 async function getReceivedHistoryJson() {
     const currentUserId = sessionStorage.getItem('currentUserId');
     const url = "http://localhost:3000/received?" + new URLSearchParams({ currentUserId: currentUserId });
@@ -25,7 +25,7 @@ async function getReceivedHistoryJson() {
     return receivedJSON;
 }
 
-// A partir del json de recibidos, obtener el total de puntos recibidos
+
 function getTotalReceiveddPoints(receivedJSON) {
     let points = 0;
     for (let received of receivedJSON) {
@@ -34,7 +34,6 @@ function getTotalReceiveddPoints(receivedJSON) {
     return points;
 }
 
-// Creacion de los dos graficos dinamicos teniendo en cuenta el total de puntos enviados y recibidos
 function DrawGraphics(sentPoints, receivedPoints) {
     var data1 = {
         series: [
@@ -54,7 +53,6 @@ function DrawGraphics(sentPoints, receivedPoints) {
     }
 }
 
-// Hacer peticion y obtener Json para los datos del estudiante
 async function getStudentDataJson() {
     const currentUserId = sessionStorage.getItem('currentUserId');
     const url = "http://localhost:3000/students/" + currentUserId;

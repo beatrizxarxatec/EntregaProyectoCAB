@@ -4,8 +4,8 @@ let cvValue = null;
 async function sendRegistration() {
     const form = document.getElementById("form");
     const formData = new FormData(form);
-    formData.set("avatar", avatarValue);    // La codificacion a base64 ya se hizo en el evento change del input avatar y se guardó en avatarValue
-    formData.set("cv", cvValue);            // La codificacion a base64 ya se hizo en el evento change del input cv y se guardó en cvValue
+    formData.set("avatar", avatarValue);   
+    formData.set("cv", cvValue);           
     const body = new URLSearchParams(formData);
     const registratonResult = await fetch("http://localhost:3000/register", {
         method: 'POST',
@@ -19,7 +19,7 @@ async function sendRegistration() {
 
 function getBase64(file, callback) {
     var reader = new FileReader(); 
-    reader.readAsDataURL(file); // leo el archivo como un texto codificado en base 64
+    reader.readAsDataURL(file); 
     reader.onload = function () {
         callback(reader.result);
     };
@@ -28,7 +28,7 @@ function getBase64(file, callback) {
     };
 }
 
-document.getElementById("avatar").addEventListener("change", function () { // Cuando el usuario selecciona un archivo se ejecuta el código para convertir el contenido del archivo en un texto codificado en base64
+document.getElementById("avatar").addEventListener("change", function () { 
     if (this.files.length) {
         getBase64(this.files[0], (value) => {
             avatarValue = value;
@@ -39,7 +39,7 @@ document.getElementById("avatar").addEventListener("change", function () { // Cu
     }
 });
 
-document.getElementById("cv").addEventListener("change", function () { // Lo mismo para el CV
+document.getElementById("cv").addEventListener("change", function () {
     if (this.files.length) {
         getBase64(this.files[0], (value) => {
             cvValue = value;

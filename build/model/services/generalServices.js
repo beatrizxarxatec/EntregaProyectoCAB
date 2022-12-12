@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkUserLogin = exports.changeUserPassword = exports.getUser = void 0;
 const config_js_1 = require("../../config.js");
-// CONSULTAS A LA BD
 function checkUserLogin(user, callback) {
     const queryString = "SELECT s.id, s.email_personal FROM user u inner join student s on s.email_personal = u.email where email = ? AND password = ?"; // ? parametro
     config_js_1.db.query(queryString, [user.email, user.password], (err, result) => {
@@ -28,7 +27,7 @@ function checkUserLogin(user, callback) {
 exports.checkUserLogin = checkUserLogin;
 ;
 function getUser(user, callback) {
-    const queryString = "SELECT * FROM user where email = ? AND password = ?"; // ? parametro
+    const queryString = "SELECT * FROM user where email = ? AND password = ?";
     config_js_1.db.query(queryString, [user.email, user.password], (err, result) => {
         if (err) {
             callback(err, null);
@@ -45,7 +44,7 @@ function getUser(user, callback) {
 exports.getUser = getUser;
 ;
 function changeUserPassword(user, callback) {
-    const queryString = "UPDATE user SET password= ? WHERE id = ?"; // ? parametro
+    const queryString = "UPDATE user SET password= ? WHERE id = ?";
     config_js_1.db.query(queryString, [user.password, user.id], (err, result) => {
         if (err) {
             callback(err, false);

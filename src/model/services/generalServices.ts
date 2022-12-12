@@ -4,7 +4,7 @@ import { RowDataPacket } from "mysql2";
 import { LoginResult } from "../types/Auth.js";
 import { Student } from "../types/student.js";
 
-// CONSULTAS A LA BD
+
 function checkUserLogin(user: User, callback: Function) {
   const queryString = "SELECT s.id, s.email_personal FROM user u inner join student s on s.email_personal = u.email where email = ? AND password = ?"; // ? parametro
   db.query(queryString, [user.email, user.password], (err, result) => {
@@ -29,7 +29,7 @@ function checkUserLogin(user: User, callback: Function) {
 };
 
 function getUser(user: User, callback: Function) {
-  const queryString = "SELECT * FROM user where email = ? AND password = ?"; // ? parametro
+  const queryString = "SELECT * FROM user where email = ? AND password = ?"; 
   db.query(queryString, [user.email, user.password], (err, result) => {
     if (err) {
       callback(err, null);
@@ -45,7 +45,7 @@ function getUser(user: User, callback: Function) {
 };
 
 function changeUserPassword(user: User, callback: Function) {
-  const queryString = "UPDATE user SET password= ? WHERE id = ?"; // ? parametro
+  const queryString = "UPDATE user SET password= ? WHERE id = ?";
   db.query(queryString, [user.password, user.id], (err, result) => {
     if (err) {
       callback(err, false);

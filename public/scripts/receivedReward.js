@@ -21,15 +21,10 @@ async function receivedReward(){
     if(loginResultJSON){
         createSentHistory();
     };
-    /*     if(loginResultJSON.isOk){
-        sessionStorage.setItem('currentUserEmail', loginResultJSON.email);// En el sessionStorage, poner en la llave 'currentUser' el valor de 'email' en el formulario
-        sessionStorage.setItem('currentUserId', loginResultJSON.studentId);
-        window.location.href ="mispuntosEnviados.html";
-    } */
 }
 else{
     alert(`No puedes enviar ${xp_target} puntos porque solo te quedan ${available} del total de ${total} puntos.`);
 }
 }
 
-document.getElementById("sendPoints").addEventListener("click", receivedReward); //sendPoints(id button)
+document.getElementById("sendPoints").addEventListener("click", receivedReward); 

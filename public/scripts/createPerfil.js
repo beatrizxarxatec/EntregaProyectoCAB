@@ -1,7 +1,7 @@
 let xp_sent = 0;
 let xp_received = 0;
 
-function createPerfil(studentJSON) { // En la funcion loadAll le proporcionan el valor del parametro rewardsJSON
+function createPerfil(studentJSON) { 
     document.getElementById("name").innerHTML = studentJSON.name;
     document.getElementById("firstSurname").innerHTML = studentJSON.first_surname;
     document.getElementById("secondSurname").innerHTML = studentJSON.second_surname;
@@ -23,7 +23,7 @@ function createPerfil(studentJSON) { // En la funcion loadAll le proporcionan el
 }
 
 async function loadAll() {
-    const studentJSON = await getStudentDataJson(); // Esta función está en common.js
+    const studentJSON = await getStudentDataJson(); 
     createPerfil(studentJSON);
 }
 

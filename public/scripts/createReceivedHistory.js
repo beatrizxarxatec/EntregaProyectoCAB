@@ -2,7 +2,7 @@
 let xp_sent = 0;
 let xp_received = 0;
 
-async function createReceivedHistory(receivedJSON) { // En la funcion loadAll le proporcionan el valor del parametro receivedJSON
+async function createReceivedHistory(receivedJSON) { 
     let receivedString = '';
     let receivedItem = '';
     for (let received of receivedJSON) {
@@ -20,16 +20,16 @@ async function createReceivedHistory(receivedJSON) { // En la funcion loadAll le
         `;
         receivedString += receivedItem;
     }
-    document.getElementById("elementosrecibidos").innerHTML = receivedString; // id="elementosenviados" está en 
+    document.getElementById("elementosrecibidos").innerHTML = receivedString; 
 }
 
 async function loadAll() {
-    const rewardsJSON = await getSentHistoryJson(); // Esta función está en common.js
-    const receivedJSON = await getReceivedHistoryJson() // Esta función está en common.js
+    const rewardsJSON = await getSentHistoryJson(); 
+    const receivedJSON = await getReceivedHistoryJson() 
     createReceivedHistory(receivedJSON);
-    xp_sent = getTotalSentPoints(rewardsJSON); // Esta función está en common.js
-    xp_received = getTotalReceiveddPoints(receivedJSON); // Esta función está en common.js
-    DrawGraphics(xp_sent, xp_received); // Esta función está en common.js
+    xp_sent = getTotalSentPoints(rewardsJSON); 
+    xp_received = getTotalReceiveddPoints(receivedJSON);
+    DrawGraphics(xp_sent, xp_received); 
 }
 
 window.addEventListener('load', loadAll); 

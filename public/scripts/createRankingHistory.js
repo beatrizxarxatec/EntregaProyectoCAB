@@ -19,15 +19,15 @@ async function createRankingHistory() {
         `;
         rankingString += rankingItem;
     }
-    document.getElementById("historialRanking").innerHTML = rankingString; // id="historialRanking" está en ranking.html
+    document.getElementById("historialRanking").innerHTML = rankingString;
 }
 
-async function setRankingPosition() { // Puesto actual
+async function setRankingPosition() { 
     const currentUserId = sessionStorage.getItem('currentUserId');
     const url = "http://localhost:3000/currentpos?" + new URLSearchParams({ currentUserId: currentUserId });
     const ranking = await fetch(url, { method: 'GET', headers: { 'Content-Type': 'application/json' } });
     const rankingJSON = await ranking.json();
-    document.getElementById("myPositionNumber").innerHTML = rankingJSON.position; // id="myPositionNumber" está en ranking.html
+    document.getElementById("myPositionNumber").innerHTML = rankingJSON.position; 
 }
 
 async function doAll(){

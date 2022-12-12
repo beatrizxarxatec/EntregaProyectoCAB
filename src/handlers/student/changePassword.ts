@@ -3,7 +3,7 @@ import { changeUserPassword, getUser } from "../../model/services/generalService
 import { ChangePassData, ChangePassResult } from "../../model/types/Auth.js";
 import { User } from "../../model/types/User.js";
 
-async function changePassword(req: express.Request, res: express.Response) { // Forma de expresar types
+async function changePassword(req: express.Request, res: express.Response) { 
   const changePassData: ChangePassData = req.body;
 
   const oldUserData: User = {

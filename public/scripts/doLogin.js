@@ -8,7 +8,7 @@ async function doLogin(){
     });
     const loginResultJSON = await doLoginResult.json();
     if(loginResultJSON.isOk){
-        sessionStorage.setItem('currentUserEmail', loginResultJSON.email);// En el sessionStorage, poner en la llave 'currentUser' el valor de 'email' en el formulario
+        sessionStorage.setItem('currentUserEmail', loginResultJSON.email);
         sessionStorage.setItem('currentUserId', loginResultJSON.studentId);
         window.location.href ="mispuntosEnviados.html";
     }
